@@ -13,18 +13,26 @@
 		<title>Field Hockey - My hobby 🏑</title>
 		<style>
 			body {
-				background-color: #9fd3c7;
+				background: linear-gradient(
+					109.6deg,
+					rgb(17, 151, 147) 11.2%,
+					rgb(154, 214, 212) 55.4%,
+					rgb(255, 233, 171) 100.2%
+				);
 				font-family: "Montserrat", sans-serif;
 			}
 
 			h1 {
 				text-align: center;
-				color: #ececec;
+				font-weight: bolder;
+				font-size: 40px;
+				margin: 15px;
 			}
 
 			h2 {
 				text-align: center;
-				color: #ececec;
+				font-size: 25px;
+				margin-left: 27px;
 			}
 
 			footer {
@@ -33,13 +41,14 @@
 			}
 
 			.conteiner {
-				background-color: rgba(20, 45, 76, 0.8);
+				background: #e3e3e3;
 				text-align: center;
 				border-radius: 6px;
 				max-width: 650px;
 				display: block;
 				margin: 20px auto;
 				padding: 25px;
+				color: black;
 			}
 
 			.theme-button {
@@ -55,32 +64,39 @@
 
 			.theme-button:hover {
 				background-color: rgba(20, 45, 76, 0.8);
-				color: #9fd3c7;
+				color: rgb(208, 232, 226);
 				transition: all 200ms ease-in-out;
+				cursor: pointer;
 			}
 
 			.about-button {
-				background-color: rgba(20, 45, 76, 0.8);
+				background-color: transparent;
 				padding: 10px;
 				border-radius: 6px;
 				text-align: center;
-				border: 2px solid #9fd3c7;
+				border: 2px solid rgba(20, 45, 76, 0.8);
 				display: block;
 				margin: 34px auto 34px;
-				color: #9fd3c7;
+				color: rgba(20, 45, 76, 0.8);
 			}
 
 			.about-button:hover {
-				background-color: #9fd3c7;
-				transition: all 200ms ease-in-out;
+				background-color: transparent;
+				transform: scale(1.1);
 
+				transition: all 200ms ease-in-out;
+				cursor: pointer;
 				color: rgba(20, 45, 76, 0.8);
 			}
 
 			.main-image {
-				width: 85%;
+				width: 80%;
 				border-radius: 5px;
-				margin: 35px;
+				margin: 20px;
+				transition: all 200ms ease-in-out;
+			}
+			.main-image:hover {
+				transform: scale(1.1);
 			}
 
 			.images-grid {
@@ -94,11 +110,42 @@
 				width: 100%;
 				border-radius: 8px;
 				display: block;
-				margin: 10px auto;
+				margin: 5px auto;
 			}
 
-			.text-desciption {
-				color: #ececec;
+			.text-description {
+				margin: 30px 10px;
+				font-size: 15px;
+			}
+
+			.dark {
+				background: linear-gradient(
+					112.1deg,
+					rgb(32, 38, 57) 11.4%,
+					rgb(63, 76, 119) 70.2%
+				);
+			}
+
+			.dark .conteiner {
+				background-color: rgb(43, 76, 116);
+				color: #e3e3e3;
+			}
+
+			.dark .theme-button {
+				border-color: #e3e3e3;
+				color: #e3e3e3;
+			}
+
+			.dark .about-button {
+				border-color: #e3e3e3;
+				color: #e3e3e3;
+			}
+
+			.dark .about-button:hover {
+				background-color: transparent;
+				transform: scale(1.1);
+
+				transition: all 200ms ease-in-out;
 			}
 		</style>
 	</head>
@@ -126,7 +173,7 @@
 					alt="golie"
 				/>
 			</div>
-			<p class="text-desciption"
+			<p class="text-description"
 				>Field hockey, also called hockey, outdoor game played by two opposing
 				teams of 11 players each who use sticks curved at the striking end to
 				hit a small, hard ball into their opponent's goal. <br />
@@ -138,7 +185,7 @@
 			>
 		</div>
 
-		<button class="about-button">Lear more about Field Hockey </button>
+		<button class="about-button">Learn more about Field Hockey </button>
 
 		<footer>
 			<a href="https://github.com/vickymoretti/sheCodes-basic-2">Open-source</a>
@@ -147,5 +194,14 @@
 				>Victoria Moretti</a
 			>
 		</footer>
+		<script>
+			function changeTheme() {
+				let body = document.querySelector("body");
+				body.classList.toggle("dark");
+			}
+
+			let themeButton = document.querySelector(".theme-button");
+			themeButton.addEventListener("click", changeTheme);
+		</script>
 	</body>
 </html>
