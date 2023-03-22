@@ -10,7 +10,7 @@
 			href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
 			rel="stylesheet"
 		/>
-		<title>Field Hockey - My hobby 🏑</title>
+		<title>Field Hockey - My favourite sport 🏑</title>
 		<style>
 			body {
 				background: linear-gradient(
@@ -38,6 +38,7 @@
 			footer {
 				text-align: center;
 				font-size: 14px;
+				padding-bottom: 15px;
 			}
 
 			.conteiner {
@@ -69,7 +70,13 @@
 				cursor: pointer;
 			}
 
-			.about-button {
+			a {
+				text-decoration: none;
+
+				color: rgba(20, 45, 76, 0.8);
+			}
+
+			.about-link {
 				background-color: transparent;
 				padding: 10px;
 				border-radius: 6px;
@@ -77,10 +84,9 @@
 				border: 2px solid rgba(20, 45, 76, 0.8);
 				display: block;
 				margin: 34px auto 34px;
-				color: rgba(20, 45, 76, 0.8);
 			}
 
-			.about-button:hover {
+			.about-link:hover {
 				background-color: transparent;
 				transform: scale(1.1);
 
@@ -112,6 +118,10 @@
 				display: block;
 				margin: 5px auto;
 			}
+			.images-grid img:hover {
+				transform: scale(1.6);
+				transition: all 200ms ease-in-out;
+			}
 
 			.text-description {
 				margin: 30px 10px;
@@ -136,24 +146,28 @@
 				color: #e3e3e3;
 			}
 
-			.dark .about-button {
+			.dark .about-link {
 				border-color: #e3e3e3;
 				color: #e3e3e3;
 			}
 
-			.dark .about-button:hover {
+			.dark .about-link:hover {
 				background-color: transparent;
 				transform: scale(1.1);
 
 				transition: all 200ms ease-in-out;
 			}
+
+			.dark a {
+				color: #e3e3e3;
+			}
 		</style>
 	</head>
 	<body>
-		<button class="theme-button">Dark Theme</button>
+		<button class="theme-button">Change theme</button>
 		<div class="conteiner">
 			<h1> Field Hockey </h1>
-			<h2>My favourite hobby 🏑</h2>
+			<h2>My favourite sport 🏑</h2>
 			<img
 				src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/285/original/carlita1.jpg?1677485318"
 				alt="carlita rebecci"
@@ -174,18 +188,23 @@
 				/>
 			</div>
 			<p class="text-description"
-				>Field hockey, also called hockey, outdoor game played by two opposing
-				teams of 11 players each who use sticks curved at the striking end to
-				hit a small, hard ball into their opponent's goal. <br />
-				A game consists of 4 quarters of 17 minutes each, with an intermission
-				of 2 minutes. The goalkeeper wears thick, yet lightweight pads and,
-				while in the shooting circle, is allowed to kick the ball or stop it
-				with the foot or the body. All other players, however, may stop the ball
-				with the stick only.</p
+				>Field hockey is an outdoor game played by two opposing teams, they must
+				drive a round hockey ball by hitting it with a hockey stick towards the
+				rival team's shooting circle and then into the goal.
+				<br />
+				A game consists of 4 quarters of 17 minutes each, with an break of 2
+				minutes. The goalkeeper wears thick, yet lightweight pads and, while in
+				the shooting circle, is allowed to kick the ball or stop it with the
+				foot or the body. All other players, however, may stop the ball with the
+				stick only.</p
 			>
 		</div>
 
-		<button class="about-button">Learn more about Field Hockey </button>
+		<button class="about-link"
+			><a href="https://en.wikipedia.org/wiki/Field_hockey" target="_blank"
+				>Learn more about Field Hockey</a
+			>
+		</button>
 
 		<footer>
 			<a href="https://github.com/vickymoretti/sheCodes-basic-2">Open-source</a>
